@@ -1,0 +1,30 @@
+<!-- <form>
+    <label for="username">Username</label>&nbsp;
+    <input type="text" name="username" [(ngModel)]="user.username">
+    <br>
+    <br>
+    <label for="password">Password</label>&nbsp;
+    <input type="text" name="password" [(ngModel)]="user.password">
+    <br>
+    <button (click)="usermethod()">Sumbit</button>
+    <br><br>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let std of students">
+                <td *ngIf="!std.isEdit==true">{{std.name}}</td>
+                <td *ngIf="!std.isEdit==false"><input type="text" name="name" [(ngModel)]="std.name"/></td>
+                <td *ngIf="!std.isEdit==true">{{std.age}}</td>
+                <td *ngIf="!std.isEdit==false"><input type="text" name="age" [(ngModel)]="std.age"/></td>
+                <td><button (click)="change(std)">{{std.bt}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</form> -->

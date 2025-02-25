@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form [formGroup]="user" (ngSubmit)="registation()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" formControlName="username">
+                <span *ngIf="user.controls['username'].invalid &&user.controls['username'].touched">username required minmum 3 character</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" formControlName="password" >
+                <span *ngIf="user.controls['password'].invalid &&user.controls['password'].touched">password required minmum 4 character and maximum 8 character</span>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" formControlName="age" >
+                <span *ngIf="user.controls['age'].invalid &&user.controls['age'].touched">age required minmum 18 to 40</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email"  formControlName="email">
+                <span *ngIf="user.controls['email'].invalid &&user.controls['email'].touched"> invalid email </span>
+            </div>
+            <button [disabled]="user.invalid" type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
